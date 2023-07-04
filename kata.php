@@ -14,3 +14,24 @@
     'Ch111c111!97t105n101',
     'Ec111c111nc101pt105111n'
  ];
+
+ $vowels = [
+    ord('a') => 'a',
+    ord('e') => 'e',
+    ord('i') => 'i',
+    ord('o') => 'o',
+    ord('u') => 'u',
+    ord('y') => 'y',
+ ];
+
+ foreach($troubledPhrases as $phrase) {
+
+    foreach($vowels as $ascii => $vowel) {
+        $phrase = str_replace($ascii, $vowel, $phrase); 
+    }
+
+    $phrase = str_replace('!', 'l', $phrase);
+    $phrase = str_replace('5', 's', $phrase);
+
+    echo $phrase . PHP_EOL;
+ }
